@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <input type="text" id="test1" />
+    <input type="text" id="test2" />
+    <input type="text" id="test3" />
+  </body>
+  <script>
+    /// 프로젝트 ui 테스트 코드
+    const $ = selector => {
+      return document.querySelector(selector);
+    };
+    $('#test1').addEventListener('input', event => {
+      //event.preventDefault();
+      console.log($('#test1'.value));
+    });
+    $('#test2').addEventListener('input', event => {
+      console.log($('#test2').value);
+    });
+    $('#test2').addEventListener('input', event => {
+      console.log($('#test3').value);
+    });
+  </script>
+</html>
