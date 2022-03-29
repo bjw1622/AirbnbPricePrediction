@@ -1,27 +1,3 @@
-# from flask import Flask, render_template,request
-# app = Flask(__name__)
-
-# @app.route('/')
-# def student():
-#    return render_template('addrbook.html')
-
-# @app.route('/post', methods=['GET','POST'])
-# def post():
-#     if request.method == 'POST':
-#         value = request.form['id_name']
-#         value = str(value)
-#         print(value)
-#     return render_template('post.html')
-  
-# @app.route('/pbook',methods = ['POST', 'GET'])
-# def result():
-#    if request.method == 'POST':
-#       val = request.form #addrbook.html에서 name을 통해 submit한 값들을 val 객체로 전달
-#       return render_template("pbook.html",result = val) #name은 key, name에 저장된 값은 value
-    
-# if __name__ == '__main__':
-#   app.run('0.0.0.0', port=5000, debug=True)
-
 from flask import Flask, render_template, request, url_for
 
 app = Flask(__name__, static_url_path='/static')
@@ -46,6 +22,11 @@ def calculate(num=None):
         temp = int(temp)
         ## 넘겨받은 문자
         temp1 = request.args.get('char1')
+        
+        # 입력 값 출력
+        print(temp)
+        print(temp1)
+         
         ## 넘겨받은 값을 원래 페이지로 리다이렉트
         return render_template('submit_test.html', num=temp, char1=temp1)
     ## else 로 하지 않은 것은 POST, GET 이외에 다른 method로 넘어왔을 때를 구분하기 위함
