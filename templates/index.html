@@ -16,6 +16,7 @@
     <input type="text" id="test2" />
     <input type="text" id="test3" />
   </body>
+  
   <script>
     /// 프로젝트 ui 테스트 코드
     const $ = selector => {
@@ -23,12 +24,12 @@
     };
     $('#test1').addEventListener('input', event => {
       //event.preventDefault();
-      console.log($('#test1'.value));
+      console.log($('#test1').value);
     });
     $('#test2').addEventListener('input', event => {
       console.log($('#test2').value);
     });
-    $('#test2').addEventListener('input', event => {
+    $('#test3').addEventListener('input', event => {
       console.log($('#test3').value);
     });
   </script>
