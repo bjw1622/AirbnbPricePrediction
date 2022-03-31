@@ -19,16 +19,12 @@ def calculate(num=None):
     elif request.method == 'GET':
         ## 넘겨받은 숫자 
         temp = request.args.get('num')
-        temp = int(temp)
         ## 넘겨받은 문자
-        temp1 = request.args.get('char1')
         
         # 입력 값 출력
         print(temp)
-        print(temp1)
-         
         ## 넘겨받은 값을 원래 페이지로 리다이렉트
-        return render_template('submit_test.html', num=temp, char1=temp1)
+        return render_template('submit_test.html', num=temp)
     ## else 로 하지 않은 것은 POST, GET 이외에 다른 method로 넘어왔을 때를 구분하기 위함
 
 if __name__ == '__main__':

@@ -37,18 +37,14 @@
     </style>
 </head>
 <body>
-    <h1> 어떤 문자를 표시하실건가요</h1><br>
+    <h1> WEB에서 Flask로 데이터 넘기기</h1><br>
     <form method="GET" action="/calculate">
         <div>
-            <label for="char1"> 표시할 문자 </label>
-            <input type="text" name="char1">
-        </div>
-        <div>
-            <label for="num"> 몇 번 </label>
+            <label for="num"> 표시할 문자 </label>
             <input type="text" name="num">
         </div>
         <div class='button'>
-            <button type="submit">숫자만큼 별 표시하기</button>
+            <button type="submit">제출하기</button>
         </div>
     </form>
     <div>
@@ -57,13 +53,6 @@
                 <h5> 아직 아무 값도 입력이 안되었습니다. </h5>
             {% else %}
                 <h5> {{num}} 를 입력받았습니다. </h5>
-                {% for i in range(1, num+1) %}
-                <p>
-                    {% for j in range(0, i) %}
-                        {{char1}}
-                    {% endfor %}
-                </p>
-                {% endfor %}
             {% endif %}
         </p>
     </div>
