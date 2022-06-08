@@ -13,7 +13,7 @@ app = Flask(__name__, static_url_path='/static')
 ## 아무 값도 넘겨받지 않는 경우도 있으므로 비어 있는 url도 함께 mapping해주는 것이 필요함
 @app.route('/')
 def main_get(num=None):
-    return render_template('ui.html', num=num)
+    return render_template('index.html', num=num)
 
 @app.route('/calculate', methods=['POST', 'GET'])
 def calculate(num=None):
@@ -33,14 +33,12 @@ def calculate(num=None):
         temp7 = request.args.get('entire')
         temp8 = request.args.get('private')
         temp9 = request.args.get('share')
-
         data_df = [[temp,temp2,temp3,temp4,temp5,temp6,temp7,temp8,temp9]]
         arr = DataFrame(data_df)
         q = arr.iloc[:, 0:9].values
-        answer = f'{loaded_model.predict(q)}'
-        print(answer)
+        answer = f'{loaded_model.predict(q)[0]*1256.11:.0f}'
         ## 넘겨받은 값을 원래 페이지로 리다이렉트
-        return render_template('ui.html', num=temp,bed=temp2,bath=temp3,min=temp4,long=temp5,lat=temp6,entire=temp7,private=temp8,share=temp9,answer=answer)
+        return render_template('result.html', answer=answer)
     ## else 로 하지 않은 것은 POST, GET 이외에 다른 method로 넘어왔을 때를 구분하기 위함
 
 if __name__ == '__main__':
