@@ -13,7 +13,15 @@ app = Flask(__name__, static_url_path='/static')
 ## 아무 값도 넘겨받지 않는 경우도 있으므로 비어 있는 url도 함께 mapping해주는 것이 필요함
 @app.route('/')
 def main_get(num=None):
-    return render_template('index.html', num=num)
+    return render_template('button.html', num=num)
+# 테스트 시작하기
+@app.route('/location')
+def start():
+    return render_template('index.html')
+
+@app.route('/world')
+def world_start():
+    return render_template('index.html')
 
 @app.route('/calculate', methods=['POST', 'GET'])
 def calculate(num=None):
