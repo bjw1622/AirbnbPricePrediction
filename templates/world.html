@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>가격 예측</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/main.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body style="background-color:#FF385C;"class="is-preload">
+    <!-- Header -->
+    <section id="header">
+      <header class="major">
+        <h1>가격 예측</h1>
+        <p>렌트 하우스 가격 예측 툴</p>
+      </header>
+      </div>
+      <div class="container">
+        <ul class="actions special">
+          <li><a href="#one" class="button primary scrolly" style="background-color:#FF385C;">이용하기</a></li>
+        </ul>
+      </div>
+    </section>
+    
+
+    <!-- One -->
+    <section id="one" class="main special">
+      <div class="container">
+        <div class="content">
+          <header class="major">
+            <h2>주소 입력</h2>
+			<p>위도 경도 얻기</p>
+          </header>
+        </div>
+        <a style="background-color:#FF385C;"href="#two" class="goto-next scrolly">Next</a>
+      </div>
+    </section>
+
+    <!-- Two -->
+    <section id="two" class="main special">
+      <div class="container">
+        <span class="image fit primary"
+          ></span>
+        <div class="content">
+          <header class="major">
+            <h2>입력</h2>
+          </header>
+    <form>
+			<div style="margin-top:20px;">
+				<label style="margin:0px;"for="num">수용인원</label>
+				<input type="text" name="num">
+			</div>
+			<div style="margin-top:20px;">
+				<label style="margin:0px;"for="bed">침대 수</label>
+				<input type="text" name="bed">
+			</div>
+			<div style="margin-top:20px;">
+				<label style="margin:0px;"for="bath">화장실 수</label>
+				<input type="text" name="bath">
+			</div>
+			<div style="margin-top:20px;">
+				<label style="margin:0px;"for="min">최소 숙박 수</label>
+				<input type="text" name="min">
+			</div>
+			<div style="margin-top:20px;">
+				<label style="margin:0px;"for="long">경도</label>
+				<input id="long"type="text" name="long">
+			</div>
+			<div style="margin-top:20px;">
+				<label style="margin:0px;"for="lat">위도</label>
+				<input id="lat"type="text" name="lat">
+			</div>
+			<div style="margin-top:20px;">
+				<label style="margin:0px;"for="entire">아파트/주택</label>
+				<input type="text" name="entire">
+			</div>
+			<div style="margin-top:20px;">
+				<label style="margin:0px;"for="private">개인실</label>
+				<input type="text" name="private">
+			</div>
+			<div style="margin-top:20px;">
+				<label style="margin:0px;"for="share"> 공유실 </label>
+				<input type="text" name="share">
+			</div>
+      <button id="submit__button"style="margin-top:15px; background-color:#FF385C;" type="submit" class="primary">가격 예측</button>
+		</form>
+        </div>
+        <a style="background-color:#FF385C;" onclick="window.location.href='/'" class="goto-next scrolly">Next</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <section id="footer">
+      <div class="container">
+        <header class="major">
+          <h2>문의 사항</h2>
+        </header>
+        <form method="post" action="#">
+          <div class="row gtr-uniform">
+            <div class="col-6 col-12-xsmall">
+              <input type="text" name="name" id="name" placeholder="Name" />
+            </div>
+            <div class="col-6 col-12-xsmall">
+              <input type="email" name="email" id="email" placeholder="Email" />
+            </div>
+            <div class="col-12">
+              <textarea
+                name="message"
+                id="message"
+                placeholder="Message"
+                rows="4"
+              ></textarea>
+            </div>
+            <div class="col-12">
+              <ul class="actions special">
+                <li>
+                  <input type="submit" value="Send" style="background-color:#FF385C;" class="primary" />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </form>
+      </div>
+      <footer>
+        <ul class="icons" style="color:white;">
+          <li>
+            <a href="https://github.com/bjw1622/AirbnbPricePrediction" class="icon brands alt fa-github"
+              ><span class="label">Twitter</span></a
+            >
+          </li>
+          <li>
+            <a href="#" class="icon solid alt fa-envelope"
+              ><span class="label">Email</span></a
+            >
+          </li>
+        </ul>
+        <ul class="copyright" style="color:white;">
+          <li>8팀</li>
+          <li><a>종합 프로젝트</a></li>
+        </ul>
+      </footer>
+    </section>
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/jquery.scrollex.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.scrolly.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/browser.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/breakpoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/util.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  </body>
+</html>

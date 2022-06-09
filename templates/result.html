@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>가격 예측</title>
+        <meta charset="utf-8" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, user-scalable=no"
+        />
+        <link
+          rel="stylesheet"
+          href="{{ url_for('static', filename='css/main.css') }}"
+        />
+        <link
+          rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}"
+        />
+      </head>
+<body>
+    <section id="three" class="main special">
+        <div class="container">
+          <span class="image fit primary"
+            ></span>
+          <div class="content">
+            <header class="major">
+              <h2>예측 값</h2>
+            </header>
+            <div>
+              <p>
+                {% if num == None %}
+                  <h5> 아직 아무 값도 입력이 안되었습니다. </h5>
+                {% else %}
+                  <h5 style="color:#FF385C;"> ₩{{answer}}원이 적정 가격 입니다. </h5>
+                  {% endif %}
+              </p>
+            </div>
+          </div>
+          <button style="background-color:#FF385C;" onclick="window.location.href='/location'" class="goto-next scrolly"></a>
+        </div>
+      </section>
+</body>
+</html>

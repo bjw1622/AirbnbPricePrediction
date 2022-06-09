@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>가격 예측</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/main.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <style>
+        .btn{width:400px; 
+            height:200px;
+            background-color:#FF385C;
+            border: 3px white solid;
+            border-radius: 1rem;
+            color: white !important;
+            font-size:32px;
+        }
+    </style>
+  </head>
+  <body class="is-preload" style="height:100% !important; text-align:center; ">
+    <div style="width:100%; height:100%; display:inline-block; margin-top:500px;">
+        <button class="btn" style="margin-right:30px;"onclick="window.location.href='/location'">국내용</button>
+        <button class="btn" style="margin-left:30px;"onclick="window.location.href='/world'">해외용</button>
+    </div>
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/jquery.scrollex.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.scrolly.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/browser.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/breakpoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/util.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  </body>
+</html>
